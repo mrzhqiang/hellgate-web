@@ -1,0 +1,17 @@
+<form>
+  <label>用户名/uid：
+    <input [(ngModel)]="account.username">
+  </label>
+  <br>
+  <label>密码：
+    <input [(ngModel)]="account.password">
+  </label>
+  <br>
+  <a class="btn-login" (click)="login()">登陆</a>
+</form>
+<br>
+"新用户请"
+<a routerLink="/register">点此注册</a>
+<br>
+<a (click)="goBack()">返回</a>
+<a routerLink="/home">首页</a>
