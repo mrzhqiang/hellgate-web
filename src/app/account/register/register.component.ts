@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Account} from '../account';
 
 @Component({
   selector: 'app-register',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  account: Account;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  register() {
+
+  }
 }
