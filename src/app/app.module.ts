@@ -1,20 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { LoginComponent } from './account/login/login.component';
-import { AppRoutingModule } from './app-routing.module';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './account/register/register.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
+import {LoginComponent} from './account/login/login.component';
+import {RegisterComponent} from './account/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomeComponent,
+    LoginComponent,
     RegisterComponent
   ],
   imports: [
@@ -22,9 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

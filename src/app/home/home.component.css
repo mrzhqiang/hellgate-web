@@ -1,0 +1,68 @@
+.layout-title {
+  text-align: center;
+  margin: 50px auto 0 auto;
+}
+
+.layout-title span {
+  font-weight: bold;
+  color: #FFFF00;
+  font-size: 60px;
+  text-shadow: #FF7F24 2px 0 0, #FF7F24 0 2px 0, #FF7F24 -2px 0 0, #FF7F24 0 -2px 0;
+  -webkit-text-shadow: #FF7F24 2px 0 0, #FF7F24 0 2px 0, #FF7F24 -2px 0 0, #FF7F24 0 -2px 0;
+  -moz-text-shadow: #FF7F24 2px 0 0, #FF7F24 0 2px 0, #FF7F24 -2px 0 0, #FF7F24 0 -2px 0;
+  *filter: Glow(color=#000, strength=30);
+}
+
+.btn-login {
+  width: 120px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 48px;
+  color: #FFF;
+  background-color: #3C6;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin: 200px auto 0 auto;
+  font-size: 20px;
+}
+
+.layout-footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.layout-footer span {
+  text-align: center;
+  display: block;
+  color: #FFF;
+}
+
+.backstretch {
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -999999;
+  position: fixed;
+}
+
+.backstretch img {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 100%;
+  width: 100%;
+  max-height: none;
+  max-width: none;
+  z-index: -999999;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
