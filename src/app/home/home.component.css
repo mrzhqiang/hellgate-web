@@ -10,10 +10,9 @@
   text-shadow: #FF7F24 2px 0 0, #FF7F24 0 2px 0, #FF7F24 -2px 0 0, #FF7F24 0 -2px 0;
   -webkit-text-shadow: #FF7F24 2px 0 0, #FF7F24 0 2px 0, #FF7F24 -2px 0 0, #FF7F24 0 -2px 0;
   -moz-text-shadow: #FF7F24 2px 0 0, #FF7F24 0 2px 0, #FF7F24 -2px 0 0, #FF7F24 0 -2px 0;
-  *filter: Glow(color=#000, strength=30);
 }
 
-.btn-login {
+.btn-login-game {
   width: 120px;
   display: block;
   text-decoration: none;

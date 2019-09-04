@@ -7,8 +7,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
-import {LoginComponent} from './account/login/login.component';
-import {RegisterComponent} from './account/register/register.component';
+import {LoginComponent} from './account/login.component';
+import {RegisterComponent} from './account/register.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {RegisterComponent} from './account/register/register.component';
     RouterModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
