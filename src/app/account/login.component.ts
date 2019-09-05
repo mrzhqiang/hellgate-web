@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Account} from './account';
 import {Location} from '@angular/common';
 import {AuthenticationService} from './authentication.service';
-import {LoggerService} from '../logger.service';
+import {LoggerService} from '../util/logger.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.account)
       .subscribe(value => {
         this.logger.log(value);
-        this.router.navigate(['/hellgate']);
+        this.router.navigate(['/hg']);
       }, error => {
         this.logger.error(JSON.stringify(error));
         this.errorMessage = error.statusText;

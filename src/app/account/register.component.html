@@ -1,10 +1,40 @@
-<div>
-  <label>注册：（7-15位数字或字母）
-    <input [(ngModel)]="account.username">
+<p *ngIf="errorMessage">{{ errorMessage }}</p>
+<br>
+<form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+  <label for="username">注册：（7-15位数字或字母）<br>
+    <input id="username" name="name" type="text" minlength="7" maxlength="15" required
+           [(ngModel)]="account.username" #name="ngModel">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+      <div *ngIf="name.errors.required">
+        必须填写用户名
+      </div>
+      <div *ngIf="name.errors.minlength">
+        用户名长度不能少于 7
+      </div>
+    </div>
   </label>
-  <label>密码：（6-15位数字或字母）
-    <input [(ngModel)]="account.password">
+  <br>
+  <label for="password">密码：（6-15位数字或字母）<br>
+    <input id="password" name="pwd" type="text" minlength="6" maxlength="15" required
+           [(ngModel)]="account.password" #pwd="ngModel">
+    <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)">
+      <div *ngIf="pwd.errors.required">
+        必须填写密码
+      </div>
+      <div *ngIf="pwd.errors.minlength">
+        密码长度不能少于 6
+      </div>
+    </div>
   </label>
-  <a class="btn" (click)="register()">注册</a>
-  已有账号？请直接<a routerLink="/login">登陆</a>
-</div>
+  <br>
+  <br>
+  <button type="submit"
+          [disabled]="!registerForm.form.valid || submitted">注册
+  </button>
+  <img *ngIf="loading" class="pl-3"
+       src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+</form>
+<br>
+兰达尔论坛用户直接由此<a routerLink="/login">登录&gt;</a>
+<br>
+{{ timestamp | date:"MM-dd HH:mm"}}
